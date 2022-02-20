@@ -47,3 +47,5 @@ $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 ifeq ($(WITH_GAPPS), true)
 TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
 endif
+
+TARGET_FACE_UNLOCK_SUPPORTED := true
