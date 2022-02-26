@@ -35,11 +35,15 @@ PRODUCT_MODEL := LE2101
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
-#GApps
-WITH_GAPPS := true
+#AEX Official
+EXTENDED_BUILD_TYPE=OFFICIAL
 
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 #Lawnchair
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
+ifeq ($(WITH_GAPPS), true)
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+endif
